@@ -115,3 +115,5 @@ button15.grid(row=5,column=2,padx=10,pady=10,ipadx=10)
 button16=Button(text="clear",command=clear,width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
 button16.grid(row=5,column=3,padx=10,pady=10,ipadx=10)
 app.mainloop()
+
+# Я зробив домашнє завдання, але синя штука не рухалася разом з цифрами. Як мені зробити так, щоб синя смужка стала посередині?
