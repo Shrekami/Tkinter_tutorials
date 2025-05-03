@@ -64,54 +64,63 @@ def clear():
     lblx = 0
     lbly = 0
     nul = 0
+row=2
+column=0
+for i in range(1,10):
+    button1=Button(text=i,command=lambda x=i: q(x),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
+    button1.grid(row=row,column=column,padx=14,pady=10,ipadx=85,sticky="nsew")
+    column+=1
+    if column==3:
+        row+=1
+        column=0
 
-button1=Button(text="1",command=lambda :q(1),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
-button1.grid(row=2,column=0,padx=10,pady=10,ipadx=10,sticky="nsew")
+#
+# button2=Button(text="2",command=lambda :q(2),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
+# button2.grid(row=2,column=1,padx=10,pady=10,ipadx=10,sticky="nsew")
+#
 
-button2=Button(text="2",command=lambda :q(2),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
-button2.grid(row=2,column=1,padx=10,pady=10,ipadx=10,sticky="nsew")
 
-button3=Button(text="3",command=lambda :q(3),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
-button3.grid(row=2,column=2,padx=10,pady=10,ipadx=10,sticky="nsew")
-
-button4=Button(text="4",command=lambda :q(4),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
-button4.grid(row=2,column=3,padx=10,pady=10,ipadx=10,sticky="nsew")
-
-button5=Button(text="5",command=lambda :q(5),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
-button5.grid(row=3,column=0,padx=10,pady=10,ipadx=10,sticky="nsew")
-
-button6=Button(text="6",command=lambda :q(6),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
-button6.grid(row=3,column=1,padx=10,pady=10,ipadx=10,sticky="nsew")
-
-button7=Button(text="7",command=lambda :q(7),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
-button7.grid(row=3,column=2,padx=10,pady=10,ipadx=10,sticky="nsew")
-
-button8=Button(text="8",command=lambda :q(8),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
-button8.grid(row=3,column=3,padx=10,pady=10,ipadx=10,sticky="nsew")
-
-button9=Button(text="9",command=lambda :q(9),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
-button9.grid(row=4,column=0,padx=10,pady=10,ipadx=10,sticky="nsew")
-
-button10=Button(text="0",command=lambda :q(0),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
-button10.grid(row=4,column=1,padx=10,pady=10,ipadx=10,sticky="nsew")
+# button3=Button(text="3",command=lambda :q(3),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
+# button3.grid(row=2,column=2,padx=10,pady=10,ipadx=10,sticky="nsew")
+#
+# button4=Button(text="4",command=lambda :q(4),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
+# button4.grid(row=2,column=3,padx=10,pady=10,ipadx=10,sticky="nsew")
+#
+# button5=Button(text="5",command=lambda :q(5),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
+# button5.grid(row=3,column=0,padx=10,pady=10,ipadx=10,sticky="nsew")
+#
+# button6=Button(text="6",command=lambda :q(6),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
+# button6.grid(row=3,column=1,padx=10,pady=10,ipadx=10,sticky="nsew")
+#
+# button7=Button(text="7",command=lambda :q(7),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
+# button7.grid(row=3,column=2,padx=10,pady=10,ipadx=10,sticky="nsew")
+#
+# button8=Button(text="8",command=lambda :q(8),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
+# button8.grid(row=3,column=3,padx=10,pady=10,ipadx=10,sticky="nsew")
+#
+# button9=Button(text="9",command=lambda :q(9),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
+# button9.grid(row=4,column=0,padx=10,pady=10,ipadx=10,sticky="nsew")
+#
+button10=Button(text="0",command=lambda :q(0),width=3,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
+button10.grid(row=5,column=1,padx=10,pady=10,ipadx=10,sticky="nsew")
 
 button11=Button(text="+",command=lambda:btnznak("+"),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
-button11.grid(row=4,column=2,padx=10,pady=10,ipadx=10,sticky="nsew")
+button11.grid(row=5,column=0,padx=10,pady=10,ipadx=10,sticky="nsew")
 
 button12=Button(text="-",command=lambda:btnznak("-"),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
-button12.grid(row=4,column=3,padx=10,pady=10,ipadx=10,sticky="nsew")
+button12.grid(row=5,column=2,padx=10,pady=10,ipadx=10,sticky="nsew")
 
 button13=Button(text="*",command=lambda:btnznak("*"),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
-button13.grid(row=5,column=0,padx=10,pady=10,ipadx=10,sticky="nsew")
+button13.grid(row=6,column=0,padx=10,pady=10,ipadx=10,sticky="nsew")
 
 button14=Button(text="/",command=lambda:btnznak("/"),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
-button14.grid(row=5,column=1,padx=10,pady=10,ipadx=10,sticky="nsew")
+button14.grid(row=6,column=1,padx=10,pady=10,ipadx=10,sticky="nsew")
 
 button15=Button(text="=",command=btrv,width=5,height=2,bg=Config.button_equal_bg,fg=Config.button_fg,font=Config.button_font)
-button15.grid(row=5,column=2,padx=10,pady=10,ipadx=10,sticky="nsew")
+button15.grid(row=6,column=2,padx=10,pady=10,ipadx=10,sticky="nsew")
 
 button16=Button(text="clear",command=clear,width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
-button16.grid(row=5,column=3,padx=10,pady=10,ipadx=10,sticky="nsew")
+button16.grid(row=6,column=3,padx=10,pady=10,ipadx=10,sticky="nsew")
 
 for col in range(4):
     # робить колонки однаковими по ширині
