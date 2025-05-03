@@ -22,7 +22,7 @@ def q(number):
     else:
         lbly = int(top["text"])
 
-top=Label(text="This is a calculator that can count",width=50,height=10,bg="#4e92b4")
+top=Label(text="This is a calculator that can count",width=50,height=10,bg="#4e92b4",font=Config.label_font)
 # top.place(x=80,y=50)
 top.grid(row=0,column=0,columnspan=4,rowspan=2,padx=5,pady=5,sticky="nsew")
 def btrv():
