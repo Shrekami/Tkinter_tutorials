@@ -133,3 +133,4 @@ for row in range(5):
 app.mainloop()
 
 # sticky="nsew" - розтягує кнопку в всі сторони.враховує відстань між кнопками padx,pady
+# Did I do this right?
