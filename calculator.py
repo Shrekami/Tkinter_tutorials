@@ -102,25 +102,25 @@ for i in range(1,10):
 # button9.grid(row=4,column=0,padx=10,pady=10,ipadx=10,sticky="nsew")
 #
 button10=Button(text="0",command=lambda :q(0),width=3,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
-button10.grid(row=5,column=1,padx=10,pady=10,ipadx=10,sticky="nsew")
+button10.grid(row=5,column=1,padx=10,pady=10,sticky="nsew")
 
 button11=Button(text="+",command=lambda:btnznak("+"),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
-button11.grid(row=5,column=0,padx=10,pady=10,ipadx=10,sticky="nsew")
+button11.grid(row=2,column=3,padx=10,pady=10,sticky="nsew")
 
 button12=Button(text="-",command=lambda:btnznak("-"),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
-button12.grid(row=5,column=2,padx=10,pady=10,ipadx=10,sticky="nsew")
+button12.grid(row=3,column=3,padx=10,pady=10,sticky="nsew")
 
 button13=Button(text="*",command=lambda:btnznak("*"),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
-button13.grid(row=6,column=0,padx=10,pady=10,ipadx=10,sticky="nsew")
+button13.grid(row=4,column=3,padx=10,pady=10,sticky="nsew")
 
 button14=Button(text="/",command=lambda:btnznak("/"),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
-button14.grid(row=6,column=1,padx=10,pady=10,ipadx=10,sticky="nsew")
+button14.grid(row=5,column=3,padx=10,pady=10,sticky="nsew")
 
 button15=Button(text="=",command=btrv,width=5,height=2,bg=Config.button_equal_bg,fg=Config.button_fg,font=Config.button_font)
-button15.grid(row=6,column=2,padx=10,pady=10,ipadx=10,sticky="nsew")
+button15.grid(row=5,column=2,padx=10,pady=10,sticky="nsew")
 
 button16=Button(text="clear",command=clear,width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
-button16.grid(row=6,column=3,padx=10,pady=10,ipadx=10,sticky="nsew")
+button16.grid(row=5,column=0,padx=10,pady=10,sticky="nsew")
 
 for col in range(4):
     # робить колонки однаковими по ширині
@@ -133,4 +133,3 @@ for row in range(5):
 app.mainloop()
 
 # sticky="nsew" - розтягує кнопку в всі сторони.враховує відстань між кнопками padx,pady
-# Did I do this right?
