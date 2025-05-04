@@ -68,7 +68,7 @@ row=2
 column=0
 for i in range(1,10):
     button1=Button(text=i,command=lambda x=i: q(x),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
-    button1.grid(row=row,column=column,padx=14,pady=10,ipadx=85,sticky="nsew")
+    button1.grid(row=row,column=column,padx=14,pady=10,sticky="nsew")
     column+=1
     if column==3:
         row+=1
@@ -114,19 +114,19 @@ button13=Button(text="*",command=lambda:btnznak("*"),width=5,height=2,bg=Config.
 button13.grid(row=4,column=3,padx=10,pady=10,sticky="nsew")
 
 button14=Button(text="/",command=lambda:btnznak("/"),width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
-button14.grid(row=5,column=3,padx=10,pady=10,sticky="nsew")
+button14.grid(row=5,column=2,padx=10,pady=10,sticky="nsew")
 
 button15=Button(text="=",command=btrv,width=5,height=2,bg=Config.button_equal_bg,fg=Config.button_fg,font=Config.button_font)
-button15.grid(row=5,column=2,padx=10,pady=10,sticky="nsew")
+button15.grid(row=5,column=3,padx=10,pady=10,sticky="nsew")
 
 button16=Button(text="clear",command=clear,width=5,height=2,bg=Config.button_bg,fg=Config.button_fg,font=Config.button_font)
 button16.grid(row=5,column=0,padx=10,pady=10,sticky="nsew")
 
-for col in range(4):
+for col in range(10):
     # робить колонки однаковими по ширині
     app.grid_columnconfigure(col, weight=1)
 
-for row in range(5):
+for row in range(10):
     # робить рядки однаковими по висоті
     app.grid_rowconfigure(row, weight=1)
 
