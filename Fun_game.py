@@ -11,7 +11,7 @@ winner=Label(text="Winner")
 winner.pack()
 
 def click():
-    print("hi")
+    print("h")
 
 rock=Button(text="Rock",width=6,height=1,fg="#000000")
 rock.pack(padx=10,fill="x",expand=True,side="left")
