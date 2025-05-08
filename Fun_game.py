@@ -24,3 +24,4 @@ scissors.pack(padx=10,side="left",fill="x",expand=True)
 
 app.mainloop()
 #if you press a button it needs to show you computer choice, for that use random.choice([rock,paper,scissor])
+!!!If the button is pressed, the function specified in the command is executed
