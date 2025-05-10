@@ -7,9 +7,8 @@ app.title("Robot")
 computer_choice=Label(text="computer_choice",width=12, height=14)
 computer_choice.pack()
 def get_computer_choice():
-    #here use random to get computer choice
-    #use next code for changing computer choice in label
-    computer_choice['text']= #new text
+    random.choice([rock, paper, scissors])
+    computer_choice['text']=Label(computer_choice)
 winner=Label(text="Winner")
 winner.pack()
 
