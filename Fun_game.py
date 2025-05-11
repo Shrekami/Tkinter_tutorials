@@ -3,8 +3,9 @@ from tkinter import *
 app=Tk()
 app.geometry("600x500+400+50")
 app.title("Robot")
+app["bg"]="#527bf5"
 
-computer_choice=Label(text="computer_choice",width=32, height=14)
+computer_choice=Label(text="computer_choice",width=62, height=6,bg="#52f5e8")
 computer_choice.pack()
 def get_computer_choice(my_choice):
     global computer_choice
@@ -13,8 +14,8 @@ def get_computer_choice(my_choice):
     print("Computer chose",nlo)
     win(my_choice=my_choice,machine_choice=nlo)
 
-winner=Label(text="Winner")
-winner.pack()
+winner=Label(text="Winner",width=40,bg="#5ff3d4")
+winner.pack(pady=70)
 
 def king(human):
     global winner
@@ -54,13 +55,13 @@ def clonk():
     print("You chose scissors")
     get_computer_choice(my_choice="scissors")
 
-rock=Button(text="Rock",command=click,width=6,height=1,fg="#000000",)
-rock.pack(padx=10,fill="x",expand=True,side="left")
+rock=Button(text="Rock",command=click,width=6,height=1,bg="#f03521")
+rock.pack(pady=100,padx=10,fill="x",expand=True,side="left")
 
-paper=Button(text="Paper",command=clank,width=6,height=1,fg="#000000")
+paper=Button(text="Paper",command=clank,width=6,height=1,bg="#7af35f")
 paper.pack(padx=10,side="left",fill="x",expand=True)
 
-scissors=Button(text="Scissors",command=clonk,width=6,height=1,fg="#000000")
+scissors=Button(text="Scissors",command=clonk,width=6,height=1,bg="#5f94f3")
 scissors.pack(padx=10,side="left",fill="x",expand=True)
 
 app.mainloop()
