@@ -7,6 +7,7 @@ app["bg"]="#527bf5"
 
 computer_choice=Label(text="computer_choice",width=62, height=6,bg="#52f5e8")
 computer_choice.pack()
+
 def get_computer_choice(my_choice):
     global computer_choice
     nlo=random.choice(["rock", "paper", "scissors"])
@@ -20,6 +21,14 @@ winner.pack(pady=70)
 def king(human):
     global winner
     winner["text"]=f"The winner is {human}"
+    color(human)
+def color(human):
+    if human=="nobody":
+        winner["bg"]="#f1a14c"
+    elif human=="computer":
+        winner["bg"]="#d164e4"
+    elif human=="human":
+        winner["bg"]="#189b4b"
 
 def win(my_choice,machine_choice):
     if my_choice==machine_choice:
@@ -43,19 +52,29 @@ def win(my_choice,machine_choice):
             human="computer"
     king(human)
 
+def yay(chosen):
+    rock.config(bd=5, relief="flat")
+    paper.config(bd=5, relief="flat")
+    scissors.config(bd=5, relief="flat")
+
+    chosen.config(bd=5,relief="raised")
+
 def click():
     print("You chose rock")
-    get_computer_choice(my_choice="rock")
+    yay(rock)
+    get_computer_choice(my_choice="rock",)
 
 def clank():
     print("You chose paper")
+    yay(paper)
     get_computer_choice(my_choice="paper")
 
 def clonk():
     print("You chose scissors")
+    yay(scissors)
     get_computer_choice(my_choice="scissors")
 
-rock=Button(text="Rock",command=click,width=6,height=1,bg="#f03521")
+rock=Button(text="Rock",command=click,width=6,height=1,bg="#f03521",)
 rock.pack(pady=100,padx=10,fill="x",expand=True,side="left")
 
 paper=Button(text="Paper",command=clank,width=6,height=1,bg="#7af35f")
@@ -65,5 +84,4 @@ scissors=Button(text="Scissors",command=clonk,width=6,height=1,bg="#5f94f3")
 scissors.pack(padx=10,side="left",fill="x",expand=True)
 
 app.mainloop()
-#if you press a button it needs to show you computer choice, for that use random.choice([rock,paper,scissor])
-# !!If the button is pressed, the function specified in the command is executed
+# make a frame to each button that you pressed
