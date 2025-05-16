@@ -84,4 +84,4 @@ scissors=Button(text="Scissors",command=clonk,width=6,height=1,bg="#5f94f3")
 scissors.pack(padx=10,side="left",fill="x",expand=True)
 
 app.mainloop()
-# make a frame to each button that you pressed
+# make a frame to each button that you press
