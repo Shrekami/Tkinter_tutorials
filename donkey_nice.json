@@ -1,0 +1,26 @@
+[
+    {
+        "name": "donkey",
+        "age": 2,
+        "score": 100000,
+        "color": "light_brown"
+    },
+    {
+        "name": "S.W.A.T",
+        "age": 10,
+        "score": 1000,
+        "color": "tan"
+    },
+    {
+        "name": "bob",
+        "age": 13,
+        "score": 100,
+        "color": "hispanic"
+    },
+    {
+        "name": "bob",
+        "age": 13,
+        "score": 100,
+        "color": "hispanic"
+    }
+]
