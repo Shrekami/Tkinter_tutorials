@@ -1,6 +1,5 @@
 import random
 from tkinter import *
-app=Tk()
 
 lives=2
 points=0
@@ -9,9 +8,6 @@ points=0
 def open_game_window(player_name):
     global rock, paper, scissors, computer_choice, winner
     game = Toplevel()
-
-    app = Tk()
-    app.geometry("500x250+100+75")
 
     def manp():
         name = entry.get()
@@ -146,7 +142,6 @@ def open_game_window(player_name):
 
     scissors=Button(game,text="Scissors",command=lambda:click_button(scissors),width=5,height=1,bg="#5f94f3")
     scissors.pack(padx=10,side="left",fill="x",expand=True)
-app.mainloop()
 
 # game.destroy()
 # result=Tk()
