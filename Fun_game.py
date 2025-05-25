@@ -1,16 +1,38 @@
 import random
 from tkinter import *
-
-
-
+app=Tk()
 
 lives=2
 points=0
+
 
 def open_game_window(player_name):
     global rock, paper, scissors, computer_choice, winner
     game = Toplevel()
 
+    app = Tk()
+    app.geometry("500x250+100+75")
+
+    def manp():
+        name = entry.get()
+        if len(name) <= 3:
+            house["text"] = "Your username has to be longer than 3 characters"
+            house['fg'] = "red"
+
+        elif len(name) >= 3:
+            print("Nice")
+
+    romt = Button(text="Sign in", command=manp)
+    romt.place(x=180, y=125)
+
+    square = Label(text="Write your name")
+    square.place(x=160, y=10)
+
+    entry = Entry()
+    entry.place(x=160, y=50)
+
+    house = Label(text="")
+    house.place(x=160, y=100)
 
     computer_choice=Label(game,text="computer_choice",width=100, height=6,bg="#52f5e8",font="12")
     computer_choice.pack()
@@ -124,6 +146,7 @@ def open_game_window(player_name):
 
     scissors=Button(game,text="Scissors",command=lambda:click_button(scissors),width=5,height=1,bg="#5f94f3")
     scissors.pack(padx=10,side="left",fill="x",expand=True)
+app.mainloop()
 
 # game.destroy()
 # result=Tk()

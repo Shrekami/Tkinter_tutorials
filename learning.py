@@ -1,10 +1,7 @@
-import tkinter
 from Fun_game import app as second_window
 from tkinter import *
 app1=Tk()
 app1.geometry("500x250+100+75")
-
-
 
 def manp():
     name=entry.get()
@@ -14,7 +11,7 @@ def manp():
 
     elif len(name)>=3:
         app1.destroy()
-        second_window.mainloop()
+        second_window
 
 romt=Button(text="Sign in", command=manp)
 romt.place(x=180,y=125)
