@@ -14,23 +14,16 @@ def get_leaders():
 
 def update_db(player_name,score):
     with open("donkey_nice.json", "r") as file:
+        found = False
         data = json.load(file)
         for user in data :
             if user['name'] == player_name:
-                found = True
-                break
-            else:
-                found=False
+                if score>user['score']:
+                    print("you update your record")
+            found = True
 
-        if found ==False:
+        if not found:
             data.append({"name":player_name,"score":score})
-        else:
-            print(player_name[score])
-            print(user[score])
-            if player_name[score]>=user[score]:
-                data.append({"name": player_name, "score": score})
-            else:
-                pass
 
     # If user exist you need to compare actual score with score from json.
 #If actual score i bigger than score from json , we should to update score from json,in another way dont do anything
