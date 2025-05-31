@@ -25,6 +25,8 @@ def update_db(player_name,score):
         if found ==False:
             data.append({"name":player_name,"score":score})
         else:
+            print(player_name[score])
+            print(user[score])
             if player_name[score]>=user[score]:
                 data.append({"name": player_name, "score": score})
             else:
@@ -52,10 +54,9 @@ def end(player_name, score):
     leaders = get_leaders()
     number=1
     for leader in leaders[:5]:
-       best=Label(text='1.',fg='#2bea7d')
-       best.place(x=100,y=20)
-
-
+        best=Label(end_window,text=f"{leader['name']} has {leader['score']} points",fg='#2bea7d')
+        best.place(x=100,y=20+number*100)
+        number+=1
 
 # create Labels for leaderboard.In leaderboard show name of user and score
 

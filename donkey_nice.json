@@ -14,5 +14,53 @@
     {
         "name": "bob",
         "score": 100
+    },
+    {
+        "name": "rombes",
+        "score": 100
+    },
+    {
+        "name": "donkey",
+        "score": 400
+    },
+    {
+        "name": "flomp",
+        "score": 200
+    },
+    {
+        "name": "flompes",
+        "score": 0
+    },
+    {
+        "name": "feeling",
+        "score": 100
+    },
+    {
+        "name": "timesd",
+        "score": 0
+    },
+    {
+        "name": "birefy",
+        "score": 100
+    },
+    {
+        "name": "fires",
+        "score": 0
+    },
+    {
+        "name": "earth",
+        "score": 200
+    },
+    {
+        "name": "airy",
+        "score": 300
+    },
+    {
+        "name": "dimbes",
+        "score": 200
+    },
+    {
+        "name": "wromp",
+        "score": 400
     }
 ]
