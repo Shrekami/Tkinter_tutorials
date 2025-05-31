@@ -1,5 +1,6 @@
 import random
 from tkinter import *
+from ending import end
 
 lives=2
 points=0
@@ -45,8 +46,13 @@ def open_game_window(player_name):
 
     def king(human):
         global winner
-        name='donkey'
-        winner["text"]=f"{name} has {points} points and {lives} lives"
+        name=player_name
+        winner["text"]=f"{name} has {points} points and {lives}"
+        if lives !=1:
+            winner['text']+=" lives"
+        else:
+            winner['text']+=" life"
+
         color(human)
 
     def color(human):
@@ -66,61 +72,54 @@ def open_game_window(player_name):
             if machine_choice=="rock":
                 human="computer"
 
-                if lives==2:
-                    lives -= 1
-                    print("You now have", lives ,"life")
 
-                elif lives==1:
-                    lives -= 1
-                    print("You lost since you have", lives ,"lives")
-                    rock.config(state="disabled")
-                    paper.config(state="disabled")
-                    scissors.config(state="disabled")
+
 
             elif machine_choice=="paper":
                 human="human"
-                points+=100
-                print("You now have", points, "points")
+
 
         if my_choice=="rock":
             if machine_choice=="scissors":
                human="human"
-               points+=200
-               print("You now have", points, "points")
+
 
             elif machine_choice=="paper":
                 human="computer"
 
-                if lives == 2:
-                    lives -= 1
-                    print("You now have", lives, "life")
 
-                elif lives == 1:
-                    lives -= 1
-                    print("You lost since you have", lives, "lives")
-                    rock.config(state="disabled")
-                    paper.config(state="disabled")
-                    scissors.config(state="disabled")
 
         if my_choice=="paper":
             if machine_choice=="rock":
+
                 human="human"
-                points += 300
-                print("You now have", points, "points")
+                # points += 100
+                # print("You now have", points, "points")
 
             elif machine_choice=="scissors":
                 human="computer"
 
-                if lives == 2:
-                    lives -= 1
-                    print("You now have", lives, "life")
+                # if lives == 2:
+                #     lives -= 1
+                #     print("You now have", lives, "life")
 
-                elif lives == 1:
-                    lives -= 1
-                    print("You lost since you have", lives, "lives")
-                    rock.config(state="disabled")
-                    paper.config(state="disabled")
-                    scissors.config(state="disabled")
+                # elif lives == 1:
+                #     lives -= 1
+                #     print("You lost since you have", lives, "lives")
+                #     rock.config(state="disabled")
+                #     paper.config(state="disabled")
+                #     scissors.config(state="disabled")
+        if human == "human":
+            points+=100
+        elif human == "computer":
+            lives-=1
+            if lives ==0:
+                rock.config(state="disabled")
+                paper.config(state="disabled")
+                scissors.config(state="disabled")
+                game.withdraw()
+                end(player_name=player_name,score=points)
+
         king(human)
 
     def yay(chosen):

@@ -1,26 +1,19 @@
 [
     {
-        "name": "donkey",
-        "age": 2,
-        "score": 100000,
-        "color": "light_brown"
+        "name": "sviat",
+        "score": 1000
     },
     {
-        "name": "S.W.A.T",
-        "age": 10,
-        "score": 1000,
-        "color": "tan"
+        "name": "shrek",
+        "score": 1000
     },
     {
         "name": "bob",
-        "age": 13,
-        "score": 100,
-        "color": "hispanic"
+        "score": 100
     },
     {
         "name": "bob",
-        "age": 13,
-        "score": 100,
-        "color": "hispanic"
-    }
+        "score": 100
+    },
+    {}
 ]
