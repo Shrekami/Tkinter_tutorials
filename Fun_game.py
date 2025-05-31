@@ -144,4 +144,4 @@ def open_game_window(player_name):
 
 # game.destroy()
 # result=Tk()
-# each time you win earn 100 more points, you have two lives, make top player leader,add input for sign in
+# eah time you win earn 100 more points, you have two lives, make top player leader,add input for sign in

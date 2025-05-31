@@ -31,7 +31,7 @@ def update_db(player_name,score):
                 pass
 
     # If user exist you need to compare actual score with score from json.
-#If actual score is bigger than score from json , we should to update score from json,in another way dont do anything
+#If actual score i bigger than score from json , we should to update score from json,in another way dont do anything
 
 
     with open("donkey_nice.json", "w+t") as file:
