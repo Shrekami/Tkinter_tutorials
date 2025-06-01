@@ -1,4 +1,5 @@
 import json
+from tkinter import ttk
 from tkinter import *
 
 def get_leaders():
@@ -7,9 +8,7 @@ def get_leaders():
 
     def sort_by_score(user):
         return -user['score']
-    #lambda user:-user["score"]
     sorted_users = sorted(data, key=sort_by_score)
-    print(sorted_users)
     return sorted_users
 
 def update_db(player_name,score):
@@ -19,18 +18,15 @@ def update_db(player_name,score):
         for user in data :
             if user['name'] == player_name:
                 if score>user['score']:
-                    print("you update your record")
-            found = True
+                    user['score']=score
+                found = True
 
-        if not found:
+
+        if found==False:
             data.append({"name":player_name,"score":score})
 
-    # If user exist you need to compare actual score with score from json.
-#If actual score i bigger than score from json , we should to update score from json,in another way dont do anything
-
-
-    with open("donkey_nice.json", "w+t") as file:
-        json.dump(data, file, indent=4)
+    with open("donkey_nice.json", "w+t",encoding='utf-8') as file:
+        json.dump(data, file, indent=4,ensure_ascii=False)
 
 def end(player_name, score):
     end_window = Toplevel()
@@ -46,11 +42,13 @@ def end(player_name, score):
 
     leaders = get_leaders()
     number=1
-    for leader in leaders[:5]:
-        best=Label(end_window,text=f"{leader['name']} has {leader['score']} points",fg='#2bea7d')
-        best.place(x=100,y=20+number*100)
+    table=ttk.Treeview(end_window,show='headings',columns=('1','2','3'))
+    table.heading("1", text="order")
+    table.heading("2", text="name")
+    table.heading("3", text="score")
+    table.place(x=80,y=125)
+
+    number=1
+    for leader in leaders[:10]:
+        table.insert("", END, values=(number, leader["name"], leader["score"]))
         number+=1
-
-# create Labels for leaderboard.In leaderboard show name of user and score
-
-#update nice colors for login window and ending window

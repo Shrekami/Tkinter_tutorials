@@ -9,7 +9,7 @@ def manp():
     name=entry.get()
     if len(name)<=3:
         house["text"]="Your username has to be longer than 3 characters"
-        house['fg']="red"
+        house['fg']="#ff0000"
 
     elif len(name)>=3:
         app.withdraw()
@@ -24,7 +24,7 @@ square.place(x=160,y=10)
 entry=Entry(app,bg="#d0ea2b")
 entry.place(x=160,y=50)
 
-house=Label(app,text="",bg='#65c441')
+house=Label(app,text="",bg='#332bea')
 house.place(x=160,y=100,)
 app.mainloop()
 #

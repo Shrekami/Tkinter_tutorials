@@ -1,7 +1,7 @@
 [
     {
         "name": "sviat",
-        "score": 1000
+        "score": 1000000300
     },
     {
         "name": "shrek",
@@ -12,11 +12,27 @@
         "score": 100
     },
     {
-        "name": "bob",
-        "score": 100
+        "name": "flompes",
+        "score": 900
+    },
+    {
+        "name": "donkey",
+        "score": 600
     },
     {
         "name": "rombes",
+        "score": 300
+    },
+    {
+        "name": "rusty",
+        "score": 200
+    },
+    {
+        "name": "bumble bee",
+        "score": 0
+    },
+    {
+        "name": "omega",
         "score": 100
     }
 ]

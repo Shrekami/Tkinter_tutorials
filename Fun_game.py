@@ -17,7 +17,7 @@ def open_game_window(player_name):
             house['fg'] = "red"
 
         elif len(name) >= 3:
-            print("Nice")
+            pass
 
     romt = Button(text="Sign in", command=manp)
     romt.place(x=180, y=125)
@@ -38,7 +38,6 @@ def open_game_window(player_name):
         global computer_choice
         nlo=random.choice(["rock", "paper", "scissors"])
         computer_choice['text']=f"Computer chose {nlo}"
-        print("Computer chose",nlo)
         win(my_choice=my_choice,machine_choice=nlo)
 
     winner=Label(game,text="Winner",width=40,bg="#5ff3d4",font="24")
@@ -93,22 +92,9 @@ def open_game_window(player_name):
             if machine_choice=="rock":
 
                 human="human"
-                # points += 100
-                # print("You now have", points, "points")
 
             elif machine_choice=="scissors":
                 human="computer"
-
-                # if lives == 2:
-                #     lives -= 1
-                #     print("You now have", lives, "life")
-
-                # elif lives == 1:
-                #     lives -= 1
-                #     print("You lost since you have", lives, "lives")
-                #     rock.config(state="disabled")
-                #     paper.config(state="disabled")
-                #     scissors.config(state="disabled")
         if human == "human":
             points+=100
         elif human == "computer":
@@ -129,7 +115,6 @@ def open_game_window(player_name):
         chosen.config(bd=5,relief="raised")
 
     def click_button(chosen):
-        print(f"You chose",chosen ["text"])
         yay(chosen)
         get_computer_choice(my_choice=chosen ["text"].lower())
 
@@ -141,7 +126,3 @@ def open_game_window(player_name):
 
     scissors=Button(game,text="Scissors",command=lambda:click_button(scissors),width=5,height=1,bg="#5f94f3")
     scissors.pack(padx=10,side="left",fill="x",expand=True)
-
-# game.destroy()
-# result=Tk()
-# eah time you win earn 100 more points, you have two lives, make top player leader,add input for sign in
