@@ -1,0 +1,34 @@
+[
+  {
+
+    "question": "What continent has only 1 country?","choices": ["Europe","Asia","Africa","Australia"],"correct_answer": 3
+  },
+  {
+    "question": "How many letters are in the Ukranian alphabet","choices": ["28","33","31","34"],"correct_answer": 1
+  },
+  {
+    "question": "How is a currency in India called?","choices": ["Ruppe","Grivni","Dollars","Pesos"],"correct_answer": 0
+  },
+  {
+    "question": "How is portrait called, when it is written by yourself?","choices": ["Samoslaw","Self-recording","Zerkalnik","Auto portrait"],"correct_answer": 3
+  },
+  {
+    "question": "What is the name of the most expensive car type","choices": ["Audi","Lamborghini","Bugatti","Mercedes"],"correct_answer": 2
+
+  },
+  {
+    "question": "In what game is the ball not involved","choices": ["Basketball","Kerling","Soccer","Pickleball"],"correct_answer": 1
+  },
+  {
+    "question": "Which element is the most common on Earth?","choices": ["Coal","Silicon","Nickle","Iron"],"correct_answer": 3
+  },
+  {
+    "question": "Who is a writer out of these people?","choices": ["Edgar Po","Claude Monet","Usain Bolt","Jean-Claude Van Damme"],"correct_answer": 0
+  },
+  {
+    "question": "Who was/is the richest person on Earth?","choices": ["Elon Musk","Jeffrey Bezos","Mansa Musa","Cristiano Ronaldo"],"correct_answer": 2
+  },
+  {
+    "question": "What muscle does the brain mostly use for laughing","choices": ["Motor Cortex","Orbicularis Oculi","Temperal Lobe","Sensory Cortex"],"correct_answer": 1
+  }
+]
