@@ -1,5 +1,4 @@
 from tkinter import *
-from winning_window import noicee
 import json
 
 
@@ -57,8 +56,6 @@ def update_question(gaming,gaming1,gaming2,gaming3):
         money+=700000
         account_money['text'] = money
         app.withdraw()
-        noicee()
-
 
     else:
         showing["text"]=data[number]["question"]
@@ -79,6 +76,8 @@ def next_question(answer):
         lives-=1
         money-=100
         account_money['text'] = money
+        if lives==0:
+            app.withdraw()
 
 def half_help():
     pass
@@ -115,7 +114,7 @@ showing.grid(row=6,column=0,padx=0,pady=12,columnspan=6)
 
 account_money=Label(text="?",width=18, height=3,bg='blue')
 account_money.grid(row=1,column=3,padx=0,pady=0)
-# You have to check other way how to check for the win
-# Add money in the top label
-# Winning and losing window
+# You have to check other way how to check for the win:Good
+# Add money in the top label:Worked but doesn't work now because of the switching windows
+# Winning and losing window: Confused
 app.mainloop()
