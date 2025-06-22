@@ -1,23 +1,28 @@
+
 from tkinter import *
-from winning_window import noice
-from winning_window import bad
 import json
 
+game_window = None
+lives = 2
+money = 0
+number = 0
+gaming = None
+gaming1 = None
+gaming2 = None
+gaming3 = None
+showing = None
+account_money = None
+lives_label = None
 
 with open ('data_monopoly.json',"r") as file:
     data=json.load(file)
 
-lives=1
-money=0
-number=0
 print(data[number])
 
 def update_question():
-    global gaming, gaming1, gaming2, gaming3
-    global lives
+    global number, money, account_money, showing, gaming, gaming1, gaming2, gaming3
+
     global money
-    global number
-    global money,account_money,showing,app
     number+=1
     if number==2:
         money+=0
@@ -54,8 +59,7 @@ def update_question():
     if number==10:
         money+=700000
         account_money['text'] = money
-        app.withdraw()
-        noice(money)
+        game_window.destroy()
 
     else:
         showing["text"]=data[number]["question"]
@@ -77,8 +81,7 @@ def next_question(answer):
         money-=100
         account_money['text'] = money
         if lives==0:
-            app.withdraw()
-            bad(lives)
+            game_window.withdraw()
 
 def half_help():
     pass
@@ -88,10 +91,9 @@ def friend_help():
 
 def audience_help():
     pass
-def start_game(new_game_window):
-    new_game_window.destroy()
-    app = Tk()
-    app.geometry('800x800')
+def create_interface():
+    global lives, money, number
+    global gaming, gaming1, gaming2, gaming3, showing, account_money, lives_label
     gaming=Button(text=data[number]["choices"][0],command=lambda:next_question(0),width=53, height=5,bg='blue')
     gaming.grid(row=9,column=0,padx=15,pady=8,columnspan=2)
 
@@ -118,7 +120,12 @@ def start_game(new_game_window):
 
     account_money=Label(text="?",width=18, height=3,bg='blue')
     account_money.grid(row=1,column=3,padx=0,pady=0)
-    # You have to check other way how to check for the win:Good
-    # Add money in the top label:Worked but doesn't work now because of the switching windows
-    # Winning and losing window: Confused
-    app.mainloop()
+# You have to check other way how to check for the win:Good
+# Add money in the top label:Worked but doesn't work now because of the switching windows
+# Winning and losing window: Confused
+def new_game(app):
+    app.destroy()
+    game_window = Tk()
+    game_window.geometry('800x800')
+    create_interface()
+    game_window.mainloop()
