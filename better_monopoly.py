@@ -3,7 +3,7 @@ import json
 
 game_window = None
 lives = 1
-money = 10
+money = 0
 number = 0
 gaming = None
 gaming1 = None
@@ -68,7 +68,7 @@ def update_question():
         gaming3["text"] = data[number]["choices"][3]
 
 def next_question(answer):
-    global gaming,gaming1,gaming2,gaming3,game_window
+    global gaming,gaming1,gaming2,gaming3
     global lives
     global money
     if answer==data[number]["correct_answer"]:
@@ -123,7 +123,6 @@ def create_interface():
 # Add money in the top label:Worked but doesn't work now because of the switching windows
 # Winning and losing window: Confused
 def new_game(app):
-    global game_window
     app.destroy()
     game_window = Tk()
     game_window.geometry('800x800')
