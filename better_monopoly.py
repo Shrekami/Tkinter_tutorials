@@ -3,7 +3,7 @@ import json
 
 game_window = None
 lives = 1
-money = 0
+money = 10
 number = 0
 gaming = None
 gaming1 = None
