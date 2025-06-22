@@ -12,3 +12,4 @@ def bad(lives):
     fiasco = Label(app, text=f"You lost because you had {lives} lives.", width=75, height=30, bg='blue')
     fiasco.grid(row=1, column=3, padx=0, pady=0)
     app.mainloop()
+    # hmmm

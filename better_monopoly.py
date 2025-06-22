@@ -122,7 +122,7 @@ def create_interface():
     account_money.grid(row=1,column=3,padx=0,pady=0)
 # You have to check other way how to check for the win:Good
 # Add money in the top label:Worked but doesn't work now because of the switching windows
-# Winning and losing window: Confuse
+# Winning and losing window: Confuses me
 def new_game(app):
     app.destroy()
     game_window = Tk()
