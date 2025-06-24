@@ -8,7 +8,7 @@ app.geometry('800x800')
 
 
 def exit():
-    pass
+    app.destroy()
 
 game=Button(text='New game',command=lambda: new_game(app),width=115, height=25,bg='blue')
 game.grid(row=1,column=1)
