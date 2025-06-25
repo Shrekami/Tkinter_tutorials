@@ -71,8 +71,8 @@ def update_question():
         gaming2["text"] = data[number]["choices"][2]
         gaming3["text"] = data[number]["choices"][3]
 
-def next_question(answer,bad):
-    global gaming,gaming1,gaming2,gaming3,game_window
+def next_question(answer):
+    global gaming,gaming1,gaming2,gaming3,game_window,bad
     global lives
     global money
     if answer==data[number]["correct_answer"]:
@@ -129,23 +129,24 @@ def friend_help(friend):
         gaming1.config(state='disabled')
         gaming2.config(state='disabled')
 
-def get_money(money_take):
-    pass
+def get_money(money_total):
+    money_total(money)
+
 # you take the money you have and create winning and losing window colors and features.
 
 def create_interface():
-    global lives, money, number,bad
+    global lives, money, number, bad
     global gaming, gaming1, gaming2, gaming3, showing, account_money, lives_label
-    gaming=Button(text=data[number]["choices"][0],command=lambda:next_question(0,bad),width=53, height=5,bg='blue')
+    gaming=Button(text=data[number]["choices"][0],command=lambda:next_question(0,bad(lives)),width=53, height=5,bg='blue')
     gaming.grid(row=9,column=0,padx=15,pady=8,columnspan=2)
 
-    gaming1=Button(text=data[number]["choices"][1],command=lambda:next_question(1,bad),width=53, height=5,bg='blue')
+    gaming1=Button(text=data[number]["choices"][1],command=lambda:next_question(1,bad(lives)),width=53, height=5,bg='blue')
     gaming1.grid(row=10,column=0,padx=15,pady=8,columnspan=2)
 
-    gaming2=Button(text=data[number]["choices"][2],command=lambda:next_question(2,bad),width=53, height=5,bg='blue')
+    gaming2=Button(text=data[number]["choices"][2],command=lambda:next_question(2,bad(lives)),width=53, height=5,bg='blue')
     gaming2.grid(row=9,column=2,padx=15,pady=8,columnspan=2)
 
-    gaming3=Button(text=data[number]["choices"][3],command=lambda:next_question(3,bad),width=53, height=5,bg='blue')
+    gaming3=Button(text=data[number]["choices"][3],command=lambda:next_question(3,bad(lives)),width=53, height=5,bg='blue')
     gaming3.grid(row=10,column=2,padx=2,pady=8,columnspan=2)
 
     some_help=Button(text="50/50",width=15, height=2,bg='green')
@@ -158,7 +159,7 @@ def create_interface():
 
     money_take=Button(text="Get money",width=15, height=2,bg='green')
     money_take.grid(row=5,column=3,padx=20,pady=115)
-    money_take.config(command=lambda:get_money(money_take))
+    money_take.config(command=lambda:get_money)
 
     showing=Label(text=data[number]["question"],width=108, height=5,bg='aqua')
     showing.grid(row=6,column=0,padx=0,pady=12,columnspan=6)
