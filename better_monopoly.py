@@ -5,7 +5,7 @@ from winning_window import timely
 from money_window import money_total
 import json
 
-count=15
+count=5000
 game_window = None
 lives = 1
 money= 0
@@ -27,7 +27,7 @@ print(data[number])
 def update_question():
     global number, money, account_money, showing, gaming, gaming1, gaming2, gaming3,count
     global money
-    count=15
+    count=5000
     number+=1
     gaming.config(state='normal')
     gaming1.config(state='normal')
