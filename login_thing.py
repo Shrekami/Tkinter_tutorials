@@ -16,4 +16,4 @@ game.grid(row=1,column=1)
 exiting=Button(text='Exit',command=exit,width=115, height=25,bg='yellow')
 exiting.grid(row=6,column=1,pady=15)
 app.mainloop()
-# hmmg
+# hmmgq
