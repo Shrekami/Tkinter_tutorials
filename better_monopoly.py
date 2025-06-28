@@ -1,11 +1,9 @@
 from tkinter import *
-from winning_window import bad
-from winning_window import noice
-from winning_window import timely
+from winning_window import neutral
 from money_window import money_total
 import json
 
-count=5000
+count=16
 game_window = None
 lives = 1
 money= 0
@@ -27,7 +25,7 @@ print(data[number])
 def update_question():
     global number, money, account_money, showing, gaming, gaming1, gaming2, gaming3,count
     global money
-    count=5000
+    count=16
     number+=1
     gaming.config(state='normal')
     gaming1.config(state='normal')
@@ -53,7 +51,7 @@ def update_question():
     elif number==5:
         money+=4000
         account_money['text'] = money
-        account_money.config(state='disabled')
+
 
     elif number==6:
         money+=15000
@@ -73,7 +71,7 @@ def update_question():
 
     if number==10:
         game_window.destroy()
-        noice(money)
+        neutral(money,status="win")
 
     else:
         showing["text"]=data[number]["question"]
@@ -88,16 +86,18 @@ def next_question(answer):
     global money
     if answer==data[number]["correct_answer"]:
         print("Nice! You got the right answer")
-        tick()
         update_question()
     else:
         print("Wrong answer")
         lives-=1
-        money-=100
         account_money['text'] = money
         if lives==0:
             game_window.withdraw()
-            bad()
+            if number<=5:
+                neutral(money=0,status="lose")
+
+            if number>=4:
+                neutral(money={money},status="good")
 
 def tick():
     global count, after_id,new_window,i,timer
@@ -105,8 +105,9 @@ def tick():
     count-=1
     timer["text"]=count
     if count==0:
-        game_window.withdraw()
-        timely()
+        game_window.destroy()
+        game_window.after_cancel(after_id)
+        neutral(money,status="nothing")
 
 
         # if count < 5:
@@ -184,7 +185,7 @@ def create_interface():
 
     money_take=Button(text="Get money",width=15, height=2,bg='green')
     money_take.grid(row=5,column=3,padx=20,pady=115)
-    money_take.config(command=lambda:money_total(money,money_take))
+    money_take.config(command=lambda:money_total(money,money_take,game_window))
 
     showing=Label(text=data[number]["question"],width=108, height=5,bg='aqua')
     showing.grid(row=6,column=0,padx=0,pady=12,columnspan=6)
