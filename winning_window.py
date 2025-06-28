@@ -19,3 +19,4 @@ def neutral(money,status):
     look.grid(row=1, column=4, padx=150, pady=0)
 
     app.mainloop()
+# v1 monopoly

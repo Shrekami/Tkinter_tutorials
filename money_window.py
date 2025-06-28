@@ -8,3 +8,4 @@ def money_total(money,money_take,game_window):
     money_take.config(state='disabled')
     game_window.destroy()
     app.mainloop()
+# v1 monopoly

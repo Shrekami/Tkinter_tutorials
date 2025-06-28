@@ -92,12 +92,13 @@ def next_question(answer):
         lives-=1
         account_money['text'] = money
         if lives==0:
+            game_window.after_cancel(after_id)
             game_window.withdraw()
             if number<=5:
                 neutral(money=0,status="lose")
 
             if number>=4:
-                neutral(money={money},status="good")
+                neutral(money=money,status="good")
 
 def tick():
     global count, after_id,new_window,i,timer
@@ -106,7 +107,6 @@ def tick():
     timer["text"]=count
     if count==0:
         game_window.destroy()
-        game_window.after_cancel(after_id)
         neutral(money,status="nothing")
 
 
