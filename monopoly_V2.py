@@ -1,8 +1,6 @@
 from tkinter import *
 import json
 
-from better_monopoly import friend_help
-
 with open ('data_monopoly.json',"r") as file:
     data=json.load(file)
 class characters:
@@ -13,7 +11,7 @@ class characters:
             self.data = json.load(file)
         self.number=-1
         self.first_window()
-        
+
     def first_window(self):
         game = Button(text='New game',command=lambda: self.main_game(), width=115, height=25, bg='blue')
         game.grid(row=1, column=1)
@@ -21,7 +19,7 @@ class characters:
         exiting = Button(text='Exit', command=exit, width=115, height=25, bg='yellow')
         exiting.grid(row=6, column=1, pady=15)
         self.app.mainloop()
-        
+
     def main_game(self):
         self.app.destroy()
         self.count=16
@@ -42,53 +40,20 @@ class characters:
         self.gaming2.config(state='normal')
         self.gaming3.config(state='normal')
 
-        if self.number == 1:
-            self.money += 1
+        money_dict={0:0,1:1,2:9,3:90,4:900,5:4000,6:15000,7:80000,8:200000,9:700000}
+        if self.number in money_dict.keys():
+            self.money+=money_dict[self.number]
             self.account_self['text'] = self.money
-
-        if self.number == 2:
-            self.money += 9
-            self.account_self['text'] = self.money
-
-        elif self.number == 3:
-            self.money += 90
-            self.account_self['text'] = self.money
-
-        elif self.number == 4:
-            self.money += 900
-            self.account_self['text'] = self.money
-
-        elif self.number == 5:
-            self.money += 4000
-            self.account_self['text'] = self.money
-
-
-        elif self.number == 6:
-            self.money += 15000
-            self.account_self['text'] = self.money
-
-        elif self.number == 7:
-            self.money += 80000
-            self.account_self['text'] = self.money
-
-        elif self.number == 8:
-            self.money += 200000
-            self.account_self['text'] = self.money
-
-        elif self.number == 9:
-            self.money += 700000
-            self.account_self['text'] = self.money
-
-        if self.number == 10:
-            self.game_window.destroy()
-            self.neutral(status="win")
-
-        else:
             self.showing["text"] = data[self.number]["question"]
             self.gaming["text"] = data[self.number]["choices"][0]
             self.gaming1["text"] = data[self.number]["choices"][1]
             self.gaming2["text"] = data[self.number]["choices"][2]
             self.gaming3["text"] = data[self.number]["choices"][3]
+
+        else:
+            self.game_window.destroy()
+            self.neutral(status="win")
+
 
     def neutral(self, status):
         app = Tk()
@@ -138,51 +103,25 @@ class characters:
 
     def more_help(self):
         self.some_help.config(state='disabled')
+        no_more_data={0:[self.gaming3,self.gaming2],1:[self.gaming2,self.gaming],2:[self.gaming1,self.gaming3],3:[self.gaming2,self.gaming]}
         self.correct_answer = self.data[self.number]["correct_answer"]
-        if self.correct_answer == 3:
-            self.gaming.config(state='disabled')
-            self.gaming2.config(state='disabled')
-
-        elif self.correct_answer == 2:
-            self.gaming1.config(state='disabled')
-            self.gaming3.config(state='disabled')
-
-        elif self.correct_answer == 1:
-            self.gaming.config(state='disabled')
-            self.gaming3.config(state='disabled')
-
-        elif self.correct_answer == 0:
-            self.gaming2.config(state='disabled')
-            self.gaming3.config(state='disabled')
+        button_for_disable=no_more_data[self.correct_answer]
+        for button in button_for_disable:
+            button.config(state='disabled')
 
     def friend_help(self):
         self.friend.config(state='disabled')
+        data_for_disable = {0:self.gaming,1:self.gaming1,2:self.gaming2,3:self.gaming3}
         self.correct_answer = self.data[self.number]["correct_answer"]
-        if self.correct_answer == 0:
-            self.gaming1.config(state='disabled')
-            self.gaming2.config(state='disabled')
-            self.gaming3.config(state='disabled')
+        for choice,button in data_for_disable.items():
+            if choice!=self.correct_answer:
+                button.config(state="disabled")
 
-        elif self.correct_answer == 1:
-            self.gaming.config(state='disabled')
-            self.gaming2.config(state='disabled')
-            self.gaming3.config(state='disabled')
-
-        elif self.correct_answer == 2:
-            self.gaming.config(state='disabled')
-            self.gaming1.config(state='disabled')
-            self.gaming3.config(state='disabled')
-
-        elif self.correct_answer == 3:
-            self.gaming.config(state='disabled')
-            self.gaming1.config(state='disabled')
-            self.gaming2.config(state='disabled')
-
-    def money_total(self,money, money_take, game_window):
+    def money_total(self):
         self.app = Tk()
         self.app.geometry("500x500")
         self.app['bg'] = "aqua"
-        self.total = Label(self.app, text=f'You took with yourself {money} dollars.', bg='blue')
+        self.total = Label(self.app, text=f'You took with yourself {self.money} dollars.', bg='blue')
         self.total.pack()
         self.game_window.destroy()
         self.app.mainloop()
@@ -211,7 +150,7 @@ class characters:
 
         self.money_take = Button(text="Get money", width=15, height=2, bg='green')
         self.money_take.grid(row=5, column=3, padx=20, pady=115)
-        self.money_take.config(command=lambda: self.money_total(self.money, self.money_take, self.game_window))
+        self.money_take.config(command=lambda: self.money_total())
 
         self.showing = Label(text=data[self.number]["question"], width=108, height=5, bg='aqua')
         self.showing.grid(row=6, column=0, padx=0, pady=12, columnspan=6)
