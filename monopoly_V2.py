@@ -3,15 +3,22 @@ import json
 
 with open ('data_monopoly.json',"r") as file:
     data=json.load(file)
+
 class characters:
     def __init__(self):
         self.app=Tk()
         self.app.geometry('800x800')
-        with open('data_monopoly.json', "r") as file:
+        with open('data_monopoly.json', "r",encoding="utf-8") as file:
             self.data = json.load(file)
-        self.number=-1
-        self.first_window()
+        self.number=1
+        self.last_number = 0
+        for key in self.data.keys():
+            num = int(key)
+            if num >self.last_number:
+                self.last_number =num
+        self.get_question()
 
+        self.first_window()
     def first_window(self):
         game = Button(text='New game',command=lambda: self.main_game(), width=115, height=25, bg='blue')
         game.grid(row=1, column=1)
@@ -32,23 +39,32 @@ class characters:
         self.update_question()
         self.game_window.mainloop()
 
+    def get_question(self):
+        import random
+        if self.number < self.last_number or self.last_number == self.number:
+            self.data_questions = self.data[f"{self.number}"]
+            self.question_data = random.choice(self.data_questions)
+    # solve money problems
+
     def update_question(self):
         self.count = 16
         self.number += 1
+        self.get_question()
         self.gaming.config(state='normal')
         self.gaming1.config(state='normal')
         self.gaming2.config(state='normal')
         self.gaming3.config(state='normal')
 
-        money_dict={0:0,1:1,2:9,3:90,4:900,5:4000,6:15000,7:80000,8:200000,9:700000}
+
+        money_dict={0:0,1:1,2:9,3:90,4:900,5:4000,6:15000,7:80000,8:200000,9:700000,10:1000000}
         if self.number in money_dict.keys():
             self.money+=money_dict[self.number]
             self.account_self['text'] = self.money
-            self.showing["text"] = data[self.number]["question"]
-            self.gaming["text"] = data[self.number]["choices"][0]
-            self.gaming1["text"] = data[self.number]["choices"][1]
-            self.gaming2["text"] = data[self.number]["choices"][2]
-            self.gaming3["text"] = data[self.number]["choices"][3]
+            self.showing["text"] = self.question_data["question"]
+            self.gaming["text"] = self.question_data["choices"][0]
+            self.gaming1["text"] = self.question_data["choices"][1]
+            self.gaming2["text"] = self.question_data["choices"][2]
+            self.gaming3["text"] = self.question_data["choices"][3]
 
         else:
             self.game_window.destroy()
@@ -85,7 +101,7 @@ class characters:
             self.neutral(status="nothing")
 
     def next_question(self,answer):
-        if answer == data[self.number]["correct_answer"]:
+        if answer == self.question_data["correct_answer"]:
             print("Nice you got the right answer")
             self.update_question()
         else:
@@ -104,7 +120,7 @@ class characters:
     def more_help(self):
         self.some_help.config(state='disabled')
         no_more_data={0:[self.gaming3,self.gaming2],1:[self.gaming2,self.gaming],2:[self.gaming1,self.gaming3],3:[self.gaming2,self.gaming]}
-        self.correct_answer = self.data[self.number]["correct_answer"]
+        self.correct_answer = self.question_data["correct_answer"]
         button_for_disable=no_more_data[self.correct_answer]
         for button in button_for_disable:
             button.config(state='disabled')
@@ -112,7 +128,7 @@ class characters:
     def friend_help(self):
         self.friend.config(state='disabled')
         data_for_disable = {0:self.gaming,1:self.gaming1,2:self.gaming2,3:self.gaming3}
-        self.correct_answer = self.data[self.number]["correct_answer"]
+        self.correct_answer = self.question_data["correct_answer"]
         for choice,button in data_for_disable.items():
             if choice!=self.correct_answer:
                 button.config(state="disabled")
@@ -127,17 +143,18 @@ class characters:
         self.app.mainloop()
 
     def create_interface(self):
-        self.gaming = Button(text=self.data[self.number]["choices"][0], width=53, height=5, bg='blue')
+
+        self.gaming = Button(text=self.question_data["choices"][0], width=53, height=5, bg='blue')
         self.gaming.grid(row=9, column=0, padx=15, pady=8, columnspan=2)
         self.gaming.config(command=lambda: self.next_question(0))
 
-        self.gaming1 = Button(text=data[self.number]["choices"][1], command=lambda: self.next_question(1), width=53, height=5,bg='blue')
+        self.gaming1 = Button(text=self.question_data["choices"][1], command=lambda: self.next_question(1), width=53, height=5,bg='blue')
         self.gaming1.grid(row=10, column=0, padx=15, pady=8, columnspan=2)
 
-        self.gaming2 = Button(text=data[self.number]["choices"][2], command=lambda: self.next_question(2), width=53, height=5,bg='blue')
+        self.gaming2 = Button(text=self.question_data["choices"][2], command=lambda: self.next_question(2), width=53, height=5,bg='blue')
         self.gaming2.grid(row=9, column=2, padx=15, pady=8, columnspan=2)
 
-        self.gaming3 = Button(text=data[self.number]["choices"][3], command=lambda: self.next_question(3), width=53, height=5,bg='blue')
+        self.gaming3 = Button(text=self.question_data["choices"][3], command=lambda: self.next_question(3), width=53, height=5,bg='blue')
         self.gaming3.grid(row=10, column=2, padx=2, pady=8, columnspan=2)
 
         self.some_help = Button(text="50/50", width=15, height=2, bg='green')
@@ -152,7 +169,7 @@ class characters:
         self.money_take.grid(row=5, column=3, padx=20, pady=115)
         self.money_take.config(command=lambda: self.money_total())
 
-        self.showing = Label(text=data[self.number]["question"], width=108, height=5, bg='aqua')
+        self.showing = Label(text=self.question_data["question"], width=108, height=5, bg='aqua')
         self.showing.grid(row=6, column=0, padx=0, pady=12, columnspan=6)
 
         self.account_self = Label(text="0", width=18, height=3, bg='blue')

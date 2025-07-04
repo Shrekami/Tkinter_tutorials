@@ -1,34 +1,174 @@
-[
-  {
 
-    "question": "What continent has only 1 country?","choices": ["Europe","Asia","Africa","Australia"],"correct_answer": 3
-  },
-  {
-    "question": "How many letters are in the Ukranian alphabet","choices": ["28","33","31","34"],"correct_answer": 1
-  },
-  {
-    "question": "How is a currency in India called?","choices": ["Ruppe","Grivni","Dollars","Pesos"],"correct_answer": 0
-  },
-  {
-    "question": "How is portrait called, when it is written by yourself?","choices": ["Samoslaw","Self-recording","Zerkalnik","Auto portrait"],"correct_answer": 3
-  },
-  {
-    "question": "What is the name of the most expensive car type","choices": ["Audi","Lamborghini","Bugatti","Mercedes"],"correct_answer": 2
+{
+  "10": [
+    {
+      "question": "What muscle does the brain mostly use for laughing",
+      "choices": ["Motor Cortex", "Orbicularis Oculi", "Temperal Lobe", "Sensory Cortex"],
+      "correct_answer": 1
+    },
+    {
+     "question": "What is the golden ratio?",
+      "choices": ["0.067","2","1.618","1.58"],
+      "correct_answer": 2
+    },
+    {
+      "question": " Who is known as the 'Father of History'?",
+      "choices": ["Plato","Herodotus"," Socrates","Aristotle"],
+      "correct_answer": 1
+    }
+  ],
+  "9": [
+    {
+      "question": "What synthetic chemical element, is named after a famous New Zealand physicist?",
+      "choices": ["Rutherfordium", "Iodine", "Mercury", "Lithium"],
+      "correct_answer": 0
+    },
+    {
+      "question": "What is the sum of the interior angles of a triangle?",
+      "choices": ["90","300","270","180"],
+      "correct_answer": 3
+    },
+    {
+     "question": "What is the most expensive car type?",
+      "choices": ["Lamborghini", "Bugatti", "Mustang", "BMW"],
+      "correct_answer": 1
+    }
+  ],
+  "8": [
+    {
+      "question": "What color does pink and blue make?",
+      "choices": ["Purple", "Red", "Green", "Yellow"],
+      "correct_answer": 0
+    },
+    {
+      "question": "What is the 17th letter of the Ukranian alphabet",
+      "choices": ["Т", "В", "Г", "Ї"],
+      "correct_answer": 3
+    },
+    {
+      "question": "How many countries are in Europe",
+      "choices": ["37", "50", "24", "45"],
+      "correct_answer": 1
+    }
 
-  },
-  {
-    "question": "In what game is the ball not involved","choices": ["Basketball","Kerling","Soccer","Pickleball"],"correct_answer": 1
-  },
-  {
-    "question": "Which element is the most common on Earth?","choices": ["Coal","Silicon","Nickle","Iron"],"correct_answer": 3
-  },
-  {
-    "question": "Who is a writer out of these people?","choices": ["Edgar Po","Claude Monet","Usain Bolt","Jean-Claude Van Damme"],"correct_answer": 0
-  },
-  {
-    "question": "Who was/is the richest person on Earth?","choices": ["Elon Musk","Jeffrey Bezos","Mansa Musa","Cristiano Ronaldo"],"correct_answer": 2
-  },
-  {
-    "question": "What muscle does the brain mostly use for laughing","choices": ["Motor Cortex","Orbicularis Oculi","Temperal Lobe","Sensory Cortex"],"correct_answer": 1
-  }
-]
+    ],
+  "7": [
+    {
+      "question": "What is the 4th biggest state in the united states?",
+      "choices": ["Wyoming", "Nebraska", "Montana", "Alabama"],
+      "correct_answer": 2
+    },
+    {
+      "question": "How is a currency in India called?",
+      "choices": ["Ruppe", "Grivni", "Dollars", "Pesos"],
+      "correct_answer": 0
+    },
+    {
+      "question": "What is the coldest city in the world?",
+      "choices": ["Antarctica", "Harbin", "Yellowknife", "Yakutsk"],
+      "correct_answer": 3
+    }
+    ],
+   "6": [
+     {
+        "question": "What year was predicted to be the end of the world?",
+      "choices": ["2010", "2012", "1998", "2005"],
+      "correct_answer": 1
+     },
+     {
+       "question": "Why can't the chicken cross the road?",
+      "choices": ["I don't know", "Because of the cars", "Becccaaussseeee", "Since it can fly"],
+      "correct_answer": 2
+     },
+     {
+       "question": "What country has the highest life expectancy in the world? ",
+      "choices": ["Japan", "U.S.A", "China", "Switzerland"],
+      "correct_answer": 0
+     }
+     ],
+  "5": [
+    {
+      "question": "What do you call the study of weather, climate and the atmosphere?",
+      "choices": ["Mycology", "Orthodontist", "Doctor", "Meteorology"],
+      "correct_answer": 3
+    },
+    {
+      "question": "What is the highest temperature ever on Earth",
+      "choices": ["127 fahrenheit", "134 fahrenheit", "118 fahrenheit", "149 fahrenheit"],
+      "correct_answer": 1
+    },
+    {
+       "question": "What is the lowest temperature ever on Earth",
+      "choices": ["-137 fahrenheit", "-127.3 fahrenheit", "-128.6 fahrenheit", "-149.3 fahrenheit"],
+      "correct_answer": 2
+    }
+    ],
+  "4": [
+    {
+      "question": "What are volcanoes made out of?",
+      "choices": ["Magma", "Mud", "Lava", "Rocks"],
+      "correct_answer": 0
+    },
+    {
+      "question": "What is the tallest mountain in the world?",
+      "choices": ["Mount Rainier", "Mount Olympus", "Mount Krakatoa", "Mount Everest"],
+      "correct_answer": 3
+    },
+    {
+      "question": "What language does Brazil mostly speak?",
+      "choices": ["Spanish", "English", "Portuguese", "Chinese"],
+      "correct_answer": 2
+    }
+    ],
+  "3": [
+    {
+      "question": "How many sides does a pentagon have?",
+      "choices": ["4", "5", "7", "6"],
+      "correct_answer": 1
+    },
+    {
+       "question": "Which food do monkeys eat the most?",
+      "choices": ["Apples", "Pears", "Watermelons", "Bananas"],
+      "correct_answer": 3
+    },
+    {
+       "question": "What thing do you need to bring the most for school",
+      "choices": ["Pen/Pencil", "Water bottle", "Money", "Knowledge"],
+      "correct_answer": 0
+    }
+    ],
+  "2": [
+    {
+      "question": "What do you need to drink the most",
+      "choices": ["Tea", "Sprite", "Water", "Smoothies"],
+      "correct_answer": 2
+    },
+    {
+      "question": "What is the biggest animal ever",
+      "choices": ["Dog", "Whale", "Donkey", "Monkey"],
+      "correct_answer": 1
+    },
+    {
+      "question": "What do cats do the most",
+      "choices": ["Meow", "Jump", "Lick", "Fall"],
+      "correct_answer": 3
+    }
+    ],
+   "1": [
+     {
+        "question": "What is 2+2?",
+      "choices": ["21", "3", "4", "9"],
+      "correct_answer": 2
+     },
+     {
+       "question": "How many seasons are in a year",
+      "choices": ["4", "3", "9", "2"],
+      "correct_answer": 0
+     },
+     {
+       "question": "What does a dog say?",
+      "choices": ["Meow", "Woof", "Mooo", "Oink,Oink"],
+      "correct_answer": 1
+     }
+     ]
+}
