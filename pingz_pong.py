@@ -47,13 +47,13 @@ def roll():
     elif bam.coords(ball)[0] <0 or bam.coords(ball)[0] == 0:
         ball_x = -ball_x
 
-    if bam.coords(ball)[2] == bam.coords(plat2)[2]:
+    if bam.coords(ball)[2] >= bam.coords(plat2)[2]:
         ball_x = -ball_x
         num2+=1
         bam.delete(text2)
         text2 = bam.create_text(750, 20, text=num2, font='Arial 30')
 
-    if bam.coords(ball)[0] == bam.coords(plat1)[0]:
+    if bam.coords(ball)[0] <= bam.coords(plat1)[0]:
         ball_x = -ball_x
         num1+=1
         bam.delete(text1)
