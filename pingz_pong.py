@@ -40,11 +40,6 @@ def roll():
     if bam.coords(ball)[3]>500 or bam.coords(ball)[3]==500:
         ball_y=-ball_y
 
-    elif bam.coords(ball)[2]>1000 or bam.coords(ball)[2]==1000:
-        ball_x=-ball_x
-        num1+=1
-        bam.delete(text1)
-        text1=bam.create_text(250,20,text=num1,font='Arial 30')
 
     elif bam.coords(ball)[1] < 0 or bam.coords(ball)[1] == 0:
         ball_y = -ball_y
