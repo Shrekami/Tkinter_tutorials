@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox
 app=Tk()
 app.geometry("1000x500")
 app.resizable(False,False)
@@ -33,6 +34,17 @@ def moving(event):
     if bam.coords(plat2)[3] + 20 < 600 and event.keysym == 'Down':
         bam.move(plat2, 0, 20)
 
+def points():
+    global num1, num2
+    if num1==11 or num1>=11:
+        if num1-num2==2 or num1-num2>=2:
+            app.destroy()
+            messagebox.showinfo("PLayer 1","Player1 has won")
+
+    if num2==11 or num2>=11:
+        if num2-num1==2 or num2-num1>=2:
+            app.destroy()
+            messagebox.showinfo("PLayer 2", "Player2 has won")
 
 def roll():
     global ball_x,ball_y,num1,num2,text1,text2
@@ -67,6 +79,7 @@ def roll():
     if bam.coords(ball)[0]>bam.coords(plat1)[0] and bam.coords(ball)[0]<bam.coords(plat1)[2] and bam.coords(ball)[1]>bam.coords(plat1)[1] and bam.coords(ball)[1]<bam.coords(plat1)[3]:
         ball_x=-ball_x
         ball_y=ball_y
+    points()
 
 roll()
 bam.bind('<w>',moving)
