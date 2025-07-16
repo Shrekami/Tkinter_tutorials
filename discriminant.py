@@ -37,6 +37,7 @@ def discriminantiv2():
     global explain
     global monkey
     global king_kong
+    x1,x2=randomizer()
     monkey['text'] = (f"x1*x2=c\n"#dont touch
                       f"x1+x2=-b\n"#dont touch
                       f"x1*x2={c}\n"# change -5
