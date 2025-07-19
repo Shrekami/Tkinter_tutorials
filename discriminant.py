@@ -34,6 +34,8 @@ def randomizer():
         for x2 in range(-100,100):
             if x1+x2 == -b and x1*x2 ==c:
                 return x1,x2
+            else:
+                return None,None
 
 def discriminantiv2():
     global explain
