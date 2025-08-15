@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Federant&display=swap');
+body{
+    background-color:aqua;
+    padding-right:100px
+    padding-left:100px
+    }
+img{
+    padding-right:105px;
+    width:200px;
+    height:150px;
+    }
+p{
+    font-family:"Roboto Mono";
+    }
+h2{
+    font-family:"Quicksand";
+    }
+h3{
+    font-family:"Archivo Black";
+    }
+h4{
+    font-family:"Federant";
+    }
