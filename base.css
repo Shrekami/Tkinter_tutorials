@@ -12,11 +12,15 @@ img{
     width:200px;
     height:150px;
     }
+h1{
+    padding-left:420px;
+    }
 p{
     font-family:"Roboto Mono";
     }
 h2{
     font-family:"Quicksand";
+    padding-left:500px;
     }
 h3{
     font-family:"Archivo Black";
