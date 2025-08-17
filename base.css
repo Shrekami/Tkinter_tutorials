@@ -8,9 +8,18 @@ body{
     padding-left:100px
     }
 img{
-    padding-right:105px;
-    width:200px;
-    height:150px;
+    height:200px;
+    width:250px;
+    }
+img.eat{
+    height:200px;
+    width:270px;
+    padding-left:225px;
+    }
+img.drink{
+    height:200px;
+    width:250px;
+    padding-left:230px;
     }
 h1{
     padding-left:420px;
@@ -18,13 +27,30 @@ h1{
 p{
     font-family:"Roboto Mono";
     }
-h2{
+h2.bad{
     font-family:"Quicksand";
     padding-left:500px;
+    color: white
+    }
+h2.worse{
+    font-family:"Quicksand";
+    padding-left:500px;
+    color: maroon
     }
 h3{
     font-family:"Archivo Black";
     }
 h4{
     font-family:"Federant";
+    }
+h2.my-link{
+    font-family:"Roboto Mono";
+    color: green;
+    padding-left: 525px;
+    }
+
+h2.shrek{
+    font-family:"Federant";
+    color: blue;
+    padding-left: 525px;
     }
