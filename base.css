@@ -3,9 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Federant&display=swap');
 body{
-    background-color:aqua;
-    padding-right:100px
-    padding-left:100px
+    font-size:20px;
+    background-color:green;
+
     }
 img{
     height:200px;
@@ -22,7 +22,7 @@ img.drink{
     padding-left:230px;
     }
 h1{
-    padding-left:420px;
+    padding-left:20px;
     }
 p{
     font-family:"Roboto Mono";
@@ -46,11 +46,40 @@ h4{
 h2.my-link{
     font-family:"Roboto Mono";
     color: green;
-    padding-left: 525px;
+    margin-left: 525px;
     }
 
 h2.shrek{
     font-family:"Federant";
     color: blue;
-    padding-left: 525px;
+    margin-left: 525px;
+    }
+a{
+    text-decoration:blink;
+    font-size:150%
+
+    }
+
+
+.blink {
+  animation: blink 2s step-start infinite;
+}
+.geese{
+    animation: blink 1s step-start infinite;
+}
+.goose{
+    animation: blink 3s step-start infinite;
+}
+
+
+img.booing{
+    margin-left:50px;
+    }
+
+img.moving{
+    padding-left:65px;
+    }
+
+img.fooling{
+    padding-left:80px;
     }
