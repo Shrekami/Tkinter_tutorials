@@ -23,9 +23,10 @@ img.drink{
     }
 h1{
     padding-left:20px;
+    font-family:"Quicksand";
     }
-p{
-    font-family:"Roboto Mono";
+.colorred{
+    color:#4DF527;
     }
 h2.bad{
     font-family:"Quicksand";
@@ -71,6 +72,9 @@ a{
     animation: blink 3s step-start infinite;
 }
 
+.rombo{
+    margin-left:350px;
+    }
 
 img.boing{
     margin-left:50px;

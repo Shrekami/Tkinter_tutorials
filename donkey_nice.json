@@ -38,5 +38,19 @@
     {
         "name": "mandor",
         "score": 0
+    },
+    {
+        "name": "monke",
+        "score": 300
+    },
+    {
+        "name": "ooooo",
+        "score": 0
+    },
+    {
+        "name": "bob",
+        "age": 13,
+        "score": 100,
+        "color": "hispanic"
     }
 ]

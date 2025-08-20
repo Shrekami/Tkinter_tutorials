@@ -5,7 +5,7 @@ app.geometry("1000x500")
 app.resizable(False,False)
 bam=Canvas(width=1000,height=500,bg='green')
 bam.pack()
-ball_x=5
+ball_x=15
 ball_y=5
 num1=0
 num2=0
