@@ -1,0 +1,161 @@
+.texture{
+    width: 300px;
+    height: 250px;
+    border: 5px solid yellow;
+    border-radius: 25% 25% ;
+    }
+
+.texture1{
+    width: 450px;
+    height: 210px;
+    border: 10px solid blue;
+    border-radius: 50px;
+    }
+
+.texture2{
+    width: 750px;
+    height: 410px;
+    border: 10px solid green;
+    border-radius: 50px;
+    }
+
+.texture3{
+    width: 450px;
+    height: 570px;
+    border: 10px solid green;
+    border-radius: 50px;
+    }
+
+.texture4{
+    width: 425px;
+    height: 70px;
+    border: 5px solid red;
+    border-radius: 50px;
+    }
+
+.texture5{
+    width: 425px;
+    height: 70px;
+    border: 5px solid purple;
+    border-radius: 50px;
+    }
+
+.texture6{
+    width: 425px;
+    height: 100px;
+    border: 5px solid orange;
+    border-radius: 50px;
+    }
+
+.order_name{
+    margin-right: 400px;
+    }
+
+body{
+    background: #4f14ff;
+    background: background: #EEAECA;
+    background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    }
+
+.white_color{
+    color: white;
+    }
+
+.ingredients{
+    margin-top: -250px;
+    padding-left: 100px;
+    }
+
+.music{
+       padding-left: 100px;
+       }
+
+.length{
+    padding-left: 420px;
+    margin-top: 150px;
+    }
+
+.fisher{
+    margin-top: -50px;
+    padding-left: 50px;
+    }
+
+.figure{
+    padding-left: 420px;
+    margin-top: -235px;
+    }
+
+.figure1{
+    padding-left: 850px;
+    margin-top: -285px;
+    }
+
+.figure2{
+    margin-top: 150px;
+    }
+
+.figure3{
+    margin-top: -235px;
+    padding-left: 420px;
+    }
+
+.figure4{
+    margin-top: -235px;
+    padding-left: 840px;
+    }
+
+.length1{
+    padding-left: 420px;
+    margin-top: 150px;
+    }
+
+.fisher1{
+    padding-left: 450px;
+    padding-up: 50px;
+    }
+
+.fisher2{
+    margin-top: -50px;
+    padding-left: 850px;
+    }
+
+.length3{
+    padding-left: 320px;
+    margin-top: 150px;
+    }
+
+.fisher3{
+    margin-top: -50px;
+    padding-left: 50px;
+    }
+
+.length4{
+    padding-left: 320px;
+    margin-top: 150px;
+    }
+
+.fisher4{
+    margin-top: -50px;
+    padding-left: 50px;
+    }
+
+.length5{
+    padding-left: 320px;
+    margin-top: 150px;
+    }
+
+.fisher5{
+    margin-top: -50px;
+    padding-left: 50px;
+    }
+
+
+@media screen and (max-width: 500px) {
+  div .texture2{
+    width: 750px;
+    height: 410px;
+    border: 10px solid blue!important;
+    border-radius: 50px;
+    }
+}
+

@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Federant&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
 body{
     font-size:20px;
     background-color:green;
-
     }
 img{
     height:200px;
@@ -23,7 +23,8 @@ img.drink{
     }
 h1{
     padding-left:20px;
-    font-family:"Quicksand";
+    font-size:2em;
+    font-family:"Archivo Black";
     }
 h2.bad{
     font-family:"Quicksand";
@@ -99,8 +100,14 @@ img.fooling{
 
 .colorgreen{
     color:#1AED67;
+    font-size:1.5rem;
     }
 
 .colorgold{
     color:#E0DB46;
+    }
+
+html{
+    font-size:20px;
+    font-style:italic
     }

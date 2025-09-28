@@ -1,0 +1,56 @@
+.price{
+    width: 100px;
+    margin-top: 185px;
+    padding-left: 15px;
+    }
+
+.size{
+    width: 100px;
+    padding-left: 250px;
+    margin-top: -20px;
+    }
+
+.pizza_header{
+    padding-left: 110px;
+    }
+
+.second_pizza{
+    margin-left: 475px;
+    margin-top: -260px;
+    }
+
+.third_pizza{
+    margin-left: 950px;
+    margin-top: -260px;
+    }
+
+.down{
+    margin-top: 180px;
+    padding-left: 20px;
+    }
+
+.pizza{
+    background-color: yellow;
+    }
+
+.background{
+    background-color: brown;
+    }
+
+.fresh{
+    margin-left: 650px;
+    margin-top: -240px;
+    }
+
+.fresh2{
+    margin-left: 650px;
+    margin-top: -240px;
+    }
+
+a:active{
+    color: green;
+    }
+
+.pizza:hover{
+    background-color:pink;
+    }
