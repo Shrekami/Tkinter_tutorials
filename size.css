@@ -4,12 +4,9 @@
   }
 }
 
-@media screen and (max-width: 500px) {
-  div .texture2{
-    width: 750px;
-    height: 410px;
-    border: 10px solid blue!important;
+@media (max-width: 900px) {
+  .texture2 {
+    border: 10px solid blue !important;
     border-radius: 50px;
-    }
+  }
 }
-
